@@ -1,1 +1,1 @@
-# youtube-creatix-marathon
+# Репозиторий для ютуб-марафона Creatix на канале MaxGraph - сайты как страсть
