@@ -1,7 +1,115 @@
 .services-section {
   padding-top: 212px;
+  padding-bottom: 80px;
   background-image: url("../img/services-bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  &__list {
+    margin-bottom: 80px;
+  }
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gap);
+}
+
+.services-item {
+  position: relative;
+  display: block;
+  border: 1px solid #e5e8ed;
+  border-radius: 4px;
+  padding: 0 10px;
+  padding-top: 87px;
+  padding-bottom: 90px;
+  box-shadow:
+    0 80px 80px -20px rgba(154, 156, 165, 0.08),
+    0 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0 4px 4px -4px rgba(30, 33, 44, 0.03);
+  background: var(--color-light);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    border-radius: inherit;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--color-ebony);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    border-radius: inherit;
+    background-color: rgba(#1e212c, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__content {
+    @include flex-column-center;
+
+    position: relative;
+    z-index: 10;
+  }
+
+  &__icon {
+    margin-bottom: 23px;
+    width: 52px;
+    height: 52px;
+    fill: var(--color-primary);
+    object-fit: cover;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-ebony);
+    transition: color 0.3s ease-in-out;
+  }
+
+  &--construct {
+    &::before {
+      background-image: url("../img/services-1.jpg");
+    }
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+
+    .services-item__icon {
+      fill: var(--color-light);
+    }
+
+    .services-item__title {
+      color: var(--color-light);
+    }
+  }
 }
