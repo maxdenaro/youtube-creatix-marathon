@@ -20,6 +20,12 @@
     &::placeholder {
       color: #9a9ca5;
     }
+
+    &--big {
+      padding-top: 10px;
+      height: 66px;
+      resize: none;
+    }
   }
 
   &--big {
@@ -27,6 +33,15 @@
 
     .form-field__input {
       width: 100%;
+    }
+  }
+
+  &--gray {
+    width: 100%;
+
+    .form-field__input {
+      width: 100%;
+      background-color: #f4f5f7;
     }
   }
 }
