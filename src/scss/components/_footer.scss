@@ -1,0 +1,161 @@
+.footer {
+  padding: 80px 0;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: var(--color-ebony);
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+  }
+
+  &__left {
+    grid-column: 7 span;
+  }
+
+  &__logo {
+    margin-right: 60px;
+  }
+
+  &__top {
+    @include flex-v-center;
+
+    margin-bottom: 22px;
+  }
+
+  &__descr {
+    margin: 0;
+    width: 100%;
+    max-width: 495px;
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  &__form {
+    grid-column: 5 span;
+  }
+
+  &__address {
+    grid-column: 4 span;
+  }
+
+  &__nav {
+    grid-column: 8 span;
+  }
+
+  &__copyright {
+    grid-column: 12 span;
+    padding-top: 30px;
+    font-size: 12px;
+    line-height: 150%;
+    color: var(--color-light);
+
+    span {
+      padding-left: 22px;
+      background-image: url("../img/heart.svg");
+      background-position: 2px center;
+      background-size: 16px 16px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.footer-form {
+  &__title {
+    margin: 0;
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--color-light);
+  }
+
+  &__items {
+    @include flex-v-center;
+
+    margin-bottom: 15px;
+  }
+
+  .form-field {
+    margin: 0;
+    width: 364px;
+  }
+
+  .form-field__input {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+
+  &__btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 11px 19px;
+    letter-spacing: normal;
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 12px;
+    line-height: 150%;
+  }
+}
+
+.footer-title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-light);
+}
+
+.footer-address {
+  padding-top: 20px;
+  font-style: normal;
+
+  &__item {
+    display: block;
+    font-size: 16px;
+    line-height: 160%;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+
+    a {
+      color: inherit;
+    }
+  }
+
+  &__name {
+    color: var(--color-light);
+  }
+}
+
+.footer-nav {
+  display: flex;
+  padding-top: 20px;
+  padding-left: 54px;
+
+  &__col {
+    &:not(:last-child) {
+      margin-right: 125px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 160%;
+    color: inherit;
+  }
+}
