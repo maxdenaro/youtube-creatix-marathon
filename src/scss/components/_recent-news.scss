@@ -8,11 +8,8 @@
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, 255px);
     margin-bottom: 80px;
-    gap: var(--grid-gap);
   }
 
   &__item {
