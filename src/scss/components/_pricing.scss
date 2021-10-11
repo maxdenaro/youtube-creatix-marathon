@@ -1,0 +1,129 @@
+.pricing {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  background-color: #f4f5f7;
+
+  &__decorate {
+    position: absolute;
+    left: -8px;
+    top: 0;
+  }
+
+  &__descr {
+    margin-bottom: 60px;
+  }
+}
+
+.table-wrapper {
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+  border: 1px solid #e5e8ed;
+  border-collapse: collapse;
+  border-radius: 4px;
+  width: 100%;
+  box-shadow:
+    0 80px 80px -20px rgba(154, 156, 165, 0.08),
+    0 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0 4px 4px -4px rgba(30, 33, 44, 0.03);
+  background-color: var(--color-light);
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+
+  &__heading {
+    margin-bottom: 2px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-ebony);
+  }
+
+  &__per {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-storm);
+  }
+
+  &__th {
+    padding-top: 31px;
+    padding-right: 20px;
+    padding-bottom: 24px;
+
+    &:first-child {
+      vertical-align: bottom;
+      padding-left: 24px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 150%;
+      text-align: left;
+      color: var(--color-ebony);
+    }
+  }
+
+  &__body {
+    .table__row {
+      &:nth-child(odd) {
+        background-color: #f4f5f7;
+      }
+
+      &:last-child {
+        .table__col {
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  &__col {
+    vertical-align: middle;
+    padding: 16px 0;
+    padding-right: 10px;
+    font-size: 16px;
+    line-height: 160%;
+    text-align: center;
+    color: var(--color-gray);
+
+    .btn {
+      padding: 0 20px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 36px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    &:first-child {
+      padding-left: 24px;
+      text-align: left;
+    }
+  }
+
+  &__check {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+    background-image: url("../img/table-check.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 160%;
+    text-align: center;
+    color: var(--color-gray);
+  }
+}
