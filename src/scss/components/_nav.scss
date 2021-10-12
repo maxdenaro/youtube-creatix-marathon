@@ -14,5 +14,9 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--color-gray);
+
+    &--current {
+      color: var(--color-primary);
+    }
   }
 }
