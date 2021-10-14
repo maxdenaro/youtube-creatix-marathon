@@ -1,0 +1,128 @@
+.achieve {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-image: url("../img/achieve-bg.png");
+  background-position: right bottom -350px;
+  background-repeat: no-repeat;
+  background-color: var(--color-light);
+
+  &__item {
+    @include flex-column-center;
+
+    grid-column: 3 span;
+    padding-top: 70px;
+    background-position: top center;
+    background-size: 48px 48px;
+    background-repeat: no-repeat;
+
+    &--reccom {
+      background-image: url("../img/like.svg");
+    }
+
+    &--renov {
+      background-image: url("../img/paint.svg");
+    }
+
+    &--spec {
+      background-image: url("../img/helmet.svg");
+    }
+
+    &--finish {
+      background-image: url("../img/pant.svg");
+    }
+  }
+
+  &__value {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 130%;
+    color: var(--color-primary);
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-ebony);
+  }
+
+  &__list {
+    margin-bottom: 260px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__info {
+    position: relative;
+    left: -30px;
+    top: -130px;
+    z-index: 10;
+    flex-shrink: 0;
+    border-radius: 4px;
+    padding: 80px 82px;
+    padding-right: 40px;
+    padding-bottom: 60px;
+    width: 735px;
+    box-shadow: var(--main-shadow);
+    background: var(--color-light);
+  }
+}
+
+.quote {
+  margin: 0;
+
+  &__content {
+    position: relative;
+    margin-bottom: 32px;
+    padding: 9px 53px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: 8px;
+      width: 28px;
+      height: 20px;
+      background-image: url("../img/braces.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    p {
+      margin: 0;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--color-ebony);
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__footer {
+    padding: 20px 53px;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-storm);
+    background-image: url("../img/signature.svg");
+    background-position: right 65px center;
+    background-size: 100px 68px;
+    background-repeat: no-repeat;
+  }
+
+  &__author {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-ebony);
+  }
+}

@@ -70,10 +70,6 @@
     display: none;
     grid-column: 4 span;
 
-    &:nth-child(n + 10) {
-      display: none;
-    }
-
     &--visible {
       display: block;
     }
