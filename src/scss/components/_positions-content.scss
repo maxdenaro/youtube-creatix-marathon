@@ -1,0 +1,117 @@
+.positions-content {
+  padding-top: 120px;
+  padding-bottom: 56px;
+
+  &__left {
+    grid-column: 7 span;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 5 span;
+  }
+}
+
+.positions-list {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.positions-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e5e8ed;
+  border-radius: 4px;
+  padding: 32px 40px;
+  background-color: var(--color-light);
+
+  &__meta {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-storm);
+  }
+
+  &__city {
+    position: relative;
+    margin-right: 21px;
+    padding-left: 23px;
+    background-image: url("../img/city.svg");
+    background-position: left center;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -13px;
+      top: 50%;
+      width: 1px;
+      height: 11px;
+      background-color: currentColor;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__time {
+    padding-left: 23px;
+    background-image: url("../img/time.svg");
+    background-position: left center;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-ebony);
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 11px 30px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+}
+
+.positions-looking {
+  width: 390px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 26px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    color: var(--color-ebony);
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 47px;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--color-gray);
+  }
+
+  &__btn {
+    &--subs {
+      margin-right: 22px;
+      padding-right: 44px;
+      padding-left: 44px;
+    }
+
+    &--send {
+      padding-right: 54px;
+      padding-left: 54px;
+    }
+  }
+}

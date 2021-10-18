@@ -62,4 +62,14 @@
   &--about {
     background-image: url("../img/about-hero-bg.png");
   }
+
+  &--positions {
+    background-image: url("../img/positions-hero-bg.png");
+    background-position: right -9px bottom;
+  }
+
+  &--news {
+    background-image: url("../img/news-hero-bg.png");
+    background-position: right -9px bottom;
+  }
 }
