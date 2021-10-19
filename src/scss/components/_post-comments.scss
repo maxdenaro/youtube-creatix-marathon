@@ -1,0 +1,14 @@
+.comments {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 59px;
+    }
+  }
+}
