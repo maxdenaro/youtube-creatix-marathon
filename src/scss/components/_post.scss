@@ -94,6 +94,11 @@
         background-size: cover;
         background-repeat: no-repeat;
       }
+
+      @include mobile {
+        padding: 0;
+        padding-top: 50px;
+      }
     }
 
     ul {

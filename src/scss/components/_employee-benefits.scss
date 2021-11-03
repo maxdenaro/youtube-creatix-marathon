@@ -9,6 +9,18 @@
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 27px;
     gap: calc(var(--mission-gap) * 2);
+
+    @include tablet {
+      --mission-gap: 30px;
+    }
+
+    @include minitablet {
+      --mission-gap: 10px;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__item {
@@ -45,6 +57,12 @@
     &--salary {
       background-image: url("../img/salary.svg");
     }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__subtitle {
@@ -61,6 +79,10 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--color-storm);
+  }
+
+  @include mobile {
+    padding-bottom: 40px;
   }
 }
 
@@ -85,6 +107,30 @@
   &__content {
     display: flex;
     align-items: flex-end;
+
+    @include tablet {
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      & > * {
+        margin-right: 0 !important;
+        margin-bottom: 20px;
+        width: 49%;
+        flex-grow: initial;
+
+        .form-field__input {
+          width: 100%;
+        }
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__field {
@@ -93,5 +139,10 @@
 
   &__btn {
     padding: 11px 29px;
+  }
+
+  @include mobile {
+    top: initial;
+    padding: 10px 15px;
   }
 }

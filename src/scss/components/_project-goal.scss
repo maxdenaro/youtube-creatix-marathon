@@ -2,6 +2,12 @@
   padding-top: 30px;
   padding-bottom: 120px;
 
+  .grid {
+    @include minitablet {
+      display: block;
+    }
+  }
+
   &__left {
     grid-column: 6 span;
     padding-top: 24px;
@@ -11,6 +17,10 @@
     display: flex;
     justify-content: flex-end;
     grid-column: 6 span;
+
+    @include minitablet {
+      justify-content: flex-start;
+    }
   }
 
   &__title {
@@ -44,6 +54,7 @@
   }
 
   &__category {
+    flex-shrink: 0;
     width: 130px;
     font-weight: 700;
     font-size: 16px;
@@ -57,5 +68,13 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--color-storm);
+  }
+
+  @include minitablet {
+    width: 100%;
+  }
+
+  @include mobile {
+    padding: 10px 0;
   }
 }

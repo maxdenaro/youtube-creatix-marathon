@@ -1,11 +1,21 @@
 .nav {
   &__list {
     @include flex-v-center;
+
+    @include tablet {
+      display: block;
+      margin-bottom: 40px;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 40px;
+
+      @include tablet {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -14,6 +24,20 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--color-gray);
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
 
     &--current {
       color: var(--color-primary);

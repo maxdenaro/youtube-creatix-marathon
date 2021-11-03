@@ -4,12 +4,34 @@
 
   &__content {
     max-width: 612px;
+
+    @include tablet {
+      max-width: 450px;
+    }
+
+    @include mobile {
+      width: 100%;
+      max-width: none;
+    }
   }
 
   &__image {
     position: relative;
     z-index: 5;
     margin-bottom: -60px;
+
+    @include minidesk {
+      width: 380px;
+      object-fit: cover;
+    }
+
+    @include tablet {
+      width: 300px;
+    }
+
+    @include minitablet {
+      display: none;
+    }
   }
 
   &__title {
@@ -30,6 +52,11 @@
   &__container {
     display: flex;
     justify-content: space-between;
+  }
+
+  @include minitablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 

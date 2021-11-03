@@ -4,12 +4,49 @@
 
   &__list {
     column-gap: var(--grid-gap);
-    margin-bottom: 20px;
-    row-gap: 0;
+    margin-bottom: 80px;
+    row-gap: 64px;
+  }
+
+  &__top {
+    position: relative;
+    margin-bottom: 12px;
+    font-size: 0;
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__socials {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 4px 4px;
+    padding: 20px 10px;
+    width: 100%;
+    background-color: rgba(#ff5a30, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
 
   &__item {
     grid-column: 3 span;
+
+    &:hover {
+      .team__socials {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    @include tablet {
+      grid-column: 6 span;
+    }
   }
 
   &__text {
@@ -21,6 +58,20 @@
     a {
       border-bottom: 1px solid currentColor;
       color: var(--color-primary);
+      transition: color 0.3s ease-in-out;
+
+      &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+
+      &:hover {
+        color: var(--color-active);
+      }
+
+      &:active {
+        color: var(--color-active);
+      }
     }
   }
 
@@ -35,6 +86,10 @@
       height: 100%;
       fill: var(--color-light);
       object-fit: cover;
+    }
+
+    &:not(:last-child) {
+      margin-right: 12px;
     }
   }
 
@@ -52,9 +107,5 @@
     line-height: 160%;
     text-align: center;
     color: var(--color-storm);
-  }
-
-  &__image {
-    margin-bottom: 12px;
   }
 }

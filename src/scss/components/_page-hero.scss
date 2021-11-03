@@ -31,6 +31,11 @@
     &--mb {
       margin-bottom: 60px;
     }
+
+    @include mobile {
+      font-size: 40px;
+      line-height: 54px;
+    }
   }
 
   &__descr {
@@ -39,11 +44,21 @@
     font-size: 20px;
     line-height: 150%;
     color: var(--color-storm);
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__meta {
@@ -76,6 +91,10 @@
 
     .article-meta__item:not(:last-child) {
       margin-right: 25px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
     }
   }
 
@@ -126,11 +145,30 @@
       line-height: 120%;
       letter-spacing: 1px;
       text-transform: initial;
+
+      @include minitablet {
+        font-size: 45px;
+        line-height: 58px;
+      }
+
+      @include mobile {
+        font-size: 35px;
+        line-height: 48px;
+      }
+    }
+
+    @include minidesk {
+      margin-bottom: 30px;
     }
   }
 
   &--contacts {
     background-image: url("../img/contacts-hero-bg.png");
     background-position: right -9px bottom;
+  }
+
+  @include tablet {
+    min-height: auto;
+    background-image: none;
   }
 }

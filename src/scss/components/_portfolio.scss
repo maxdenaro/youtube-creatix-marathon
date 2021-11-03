@@ -17,6 +17,16 @@
     &:not(:last-child) {
       margin-right: var(--gap);
     }
+
+    @include minitablet {
+      margin-bottom: 20px;
+      width: calc((100% - (var(--gap) * 2)) / 3);
+    }
+
+    @include mobile {
+      margin-right: 0 !important;
+      width: 100%;
+    }
   }
 
   &__btn {
@@ -63,6 +73,13 @@
     transition: color 0.3s ease-in-out;
     pointer-events: none;
   }
+
+  @include minitablet {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    transform: none;
+  }
 }
 
 .portfolio-tabs {
@@ -88,6 +105,7 @@
   font-size: 16px;
   line-height: 160%;
   color: var(--color-gray);
+  transition: color 0.3s ease-in-out;
 
   svg {
     margin-right: 16px;
@@ -96,5 +114,31 @@
     color: inherit;
     fill: currentColor;
     object-fit: cover;
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  &:hover {
+    color: var(--color-active);
+  }
+}
+
+.portfolio-tabs-nav__btn {
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    .portfolio-tabs-nav__text {
+      color: var(--color-ebony);
+    }
   }
 }

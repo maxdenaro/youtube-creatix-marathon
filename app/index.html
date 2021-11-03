@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body id="page">
   <div class="site-container">
     <header class="header header--main">
   <div class="container header__container">
@@ -27,6 +27,16 @@
         <li class="nav__item"><a href="#" class="nav__link">News</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Contacts</a></li>
       </ul>
+      <div class="header-contacts header-contacts--nav">
+        <a href="tel:4055550128" class="header-contacts__link contacts-link contacts-link--call">
+          <span class="contacts-link__caption">Call us</span>
+          <span class="contacts-link__value">(405) 555-0128</span>
+        </a>
+        <a href="mailto:hello@createx.com" class="header-contacts__link contacts-link contacts-link--mail">
+          <span class="contacts-link__caption">Talk to us</span>
+          <span class="contacts-link__value">hello@createx.com</span>
+        </a>
+      </div>
     </nav>
     <div class="header-contacts">
       <a href="tel:4055550128" class="header-contacts__link contacts-link contacts-link--call">
@@ -38,24 +48,99 @@
         <span class="contacts-link__value">hello@createx.com</span>
       </a>
     </div>
+    <button class="btn-reset burger" aria-label="Открыть меню">
+      <span class="burger__line"></span>
+    </button>
   </div>
 </header>
 
     <main>
       <section class="hero">
-  <div class="container">
-    <div class="hero__content">
-      <h1 class="main-title main-title--home">Create<span>x</span> Construction</h1>
-      <p class="main-descr main-descr--home">
-        Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed.
-        Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis.
-      </p>
-      <div class="hero__btns">
-        <button class="btn-reset btn btn--stroke btn--stroke-light">Learn more about us</button>
-        <button class="btn-reset btn btn--fill">Submit Request</button>
+  <h1 class="visually-hidden">Createx Construction Bureau</h1>
+  <div class="hero-slider">
+    <button class="btn-reset slider-nav__btn hero__prev slider-btn">
+      <svg>
+        <use xlink:href="img/sprite.svg#left-arrow"></use>
+      </svg>
+    </button>
+    <button class="btn-reset slider-nav__btn hero__next slider-btn">
+      <svg>
+        <use xlink:href="img/sprite.svg#right-arrow"></use>
+      </svg>
+    </button>
+    <div class="swiper-pagination hero__pag"></div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="hero-slide">
+          <div class="container">
+            <div class="hero__content">
+              <h1 class="main-title main-title--home">Create<span>x</span> Construction</h1>
+              <p class="main-descr main-descr--home">
+                Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed.
+                Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis.
+              </p>
+              <div class="hero__btns">
+                <button class="btn-reset btn btn--stroke btn--stroke-light">Learn more about us</button>
+                <button class="btn-reset btn btn--fill">Submit Request</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="hero-slide">
+          <div class="container">
+            <div class="hero__content">
+              <h1 class="main-title main-title--home">Create<span>x</span> Construction</h1>
+              <p class="main-descr main-descr--home">
+                Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed.
+                Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis.
+              </p>
+              <div class="hero__btns">
+                <button class="btn-reset btn btn--stroke btn--stroke-light">Learn more about us</button>
+                <button class="btn-reset btn btn--fill">Submit Request</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="hero-slide">
+          <div class="container">
+            <div class="hero__content">
+              <h1 class="main-title main-title--home">Create<span>x</span> Construction</h1>
+              <p class="main-descr main-descr--home">
+                Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed.
+                Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis.
+              </p>
+              <div class="hero__btns">
+                <button class="btn-reset btn btn--stroke btn--stroke-light">Learn more about us</button>
+                <button class="btn-reset btn btn--fill">Submit Request</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="hero-slide">
+          <div class="container">
+            <div class="hero__content">
+              <h1 class="main-title main-title--home">Create<span>x</span> Construction</h1>
+              <p class="main-descr main-descr--home">
+                Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed.
+                Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis.
+              </p>
+              <div class="hero__btns">
+                <button class="btn-reset btn btn--stroke btn--stroke-light">Learn more about us</button>
+                <button class="btn-reset btn btn--fill">Submit Request</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
 </section>
 
       <section class="about-section section-offset">
@@ -68,11 +153,6 @@
       <button class="btn-reset video-block__play" aria-label="Play video">
         <svg>
           <use xlink:href="img/sprite.svg#play"></use>
-        </svg>
-      </button>
-      <button class="btn-reset video-block__muted" aria-label="Mute video">
-        <svg>
-          <use xlink:href="img/sprite.svg#mute"></use>
         </svg>
       </button>
       <video class="video-block__content" src="about-video.mp4" muted loop preload="metadata"></video>
@@ -524,6 +604,14 @@
 
     </main>
     <footer class="footer">
+  <a href="#page" data-scroll class="to-top">
+    <span class="to-top__text">Go to top</span>
+    <span class="to-top__icon">
+      <svg>
+        <use xlink:href="img/sprite.svg#to-top"></use>
+      </svg>
+    </span>
+  </a>
   <div class="container footer__container grid">
     <div class="footer__left">
       <div class="footer__top">
@@ -625,6 +713,7 @@
     </small>
   </div>
 </footer>
+<div class="overlay"></div>
 
     
   </div>

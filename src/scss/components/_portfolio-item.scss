@@ -5,6 +5,7 @@
   border-radius: 4px;
   box-shadow: var(--main-shadow);
   background: var(--color-light);
+  transition: transform 0.3s ease-in-out;
 
   &__content {
     @include flex-column-center;
@@ -21,6 +22,10 @@
     font-size: 20px;
     line-height: 150%;
     color: var(--color-ebony);
+
+    @include minidesk {
+      font-size: 18px;
+    }
   }
 
   &__descr {
@@ -31,8 +36,8 @@
   }
 
   &__btn {
-    display: none;
     margin-top: 24px;
+    margin-bottom: -68px;
     border: 1px solid currentColor;
     border-radius: 4px;
     padding: 13px 31px;
@@ -41,5 +46,22 @@
     letter-spacing: 0.5px;
     text-transform: uppercase;
     color: var(--color-primary);
+    transition: 0.3s ease-in-out;
+    will-change: margin;
+
+    @include minitablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    .portfolio-item__btn {
+      margin-bottom: 0;
+    }
   }
 }

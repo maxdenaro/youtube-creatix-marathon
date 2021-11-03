@@ -21,9 +21,27 @@
     font-size: 14px;
     line-height: 150%;
     color: var(--color-gray);
+    transition: color 0.3s ease-in-out;
 
     &:not([href]) {
       color: #9a9ca5;
     }
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
+  }
+
+  @include minitablet {
+    flex-wrap: wrap;
   }
 }

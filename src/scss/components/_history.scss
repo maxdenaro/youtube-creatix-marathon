@@ -12,6 +12,12 @@
     transform: translate(12px, 4px);
   }
 
+  &__content {
+    @include minitablet {
+      display: block;
+    }
+  }
+
   &__item {
     grid-column: 8 span;
     overflow: hidden;
@@ -79,8 +85,29 @@
       background-color: currentColor;
     }
 
+    &:focus {
+      outline: none;
+      color: var(--color-primary);
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
+
     &--active {
       color: var(--color-primary);
     }
+
+    @include tablet {
+      font-size: 22px;
+    }
+  }
+
+  @include minitablet {
+    margin-bottom: 30px;
   }
 }

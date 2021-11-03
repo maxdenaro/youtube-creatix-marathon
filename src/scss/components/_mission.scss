@@ -8,6 +8,18 @@
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 27px;
     gap: calc(var(--mission-gap) * 2);
+
+    @include tablet {
+      --mission-gap: 30px;
+    }
+
+    @include minitablet {
+      --mission-gap: 10px;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__item {
@@ -43,6 +55,12 @@
 
     &--comfort {
       background-image: url("../img/comfort.svg");
+    }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -84,6 +102,10 @@
   &__content {
     display: flex;
     align-items: flex-end;
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__field {
@@ -92,5 +114,10 @@
 
   &__btn {
     padding: 11px 29px;
+  }
+
+  @include mobile {
+    top: initial;
+    padding: 10px 15px;
   }
 }

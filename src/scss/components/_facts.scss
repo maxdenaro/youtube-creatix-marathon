@@ -25,10 +25,34 @@
     margin: 0 auto;
     max-width: 736px;
     gap: 48px;
+
+    @include minitablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__item {
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__title {
     margin-bottom: 62px;
+
+    @include mobile {
+      margin-bottom: 25px;
+    }
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }
 
@@ -95,5 +119,11 @@
     line-height: 150%;
     text-align: center;
     color: var(--color-ebony);
+  }
+
+  @include minitablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

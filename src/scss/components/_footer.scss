@@ -5,16 +5,30 @@
 
   &__left {
     grid-column: 7 span;
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
 
   &__logo {
     margin-right: 60px;
+
+    @include mobile {
+      display: inline-block;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__top {
     @include flex-v-center;
 
     margin-bottom: 22px;
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__descr {
@@ -27,6 +41,14 @@
 
   &__form {
     grid-column: 5 span;
+
+    @include minitablet {
+      grid-column: 12 span;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
 
   &__address {
@@ -35,6 +57,10 @@
 
   &__nav {
     grid-column: 8 span;
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
 
   &__copyright {
@@ -50,6 +76,10 @@
       background-position: 2px center;
       background-size: 16px 16px;
       background-repeat: no-repeat;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
     }
   }
 }
@@ -122,6 +152,20 @@
 
     a {
       color: inherit;
+      transition: color 0.3s ease-in-out;
+
+      &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+
+      &:hover {
+        color: var(--color-light);
+      }
+
+      &:active {
+        color: var(--color-light);
+      }
     }
   }
 
@@ -138,6 +182,14 @@
   &__col {
     &:not(:last-child) {
       margin-right: 125px;
+
+      @include minitablet {
+        margin-right: 65px;
+      }
+
+      @include mobile {
+        margin-right: 35px;
+      }
     }
   }
 
@@ -151,5 +203,27 @@
     font-size: 16px;
     line-height: 160%;
     color: inherit;
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-light);
+    }
+
+    &:active {
+      color: var(--color-light);
+    }
+  }
+
+  @include minitablet {
+    padding-left: 24px;
+  }
+
+  @include mobile {
+    padding-left: 0;
   }
 }

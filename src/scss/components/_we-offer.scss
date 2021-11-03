@@ -2,6 +2,12 @@
   padding: 120px 0;
   background-color: var(--color-light);
 
+  &__container {
+    @include tablet {
+      display: block;
+    }
+  }
+
   &__image {
     grid-column: 7 span;
   }
@@ -10,6 +16,11 @@
     grid-column: 5 span;
     padding-top: 5px;
     padding-left: 75px;
+
+    @include tablet {
+      padding: 0;
+      padding-top: 30px;
+    }
   }
 
   &__title {
@@ -30,6 +41,11 @@
       padding-right: 20px;
       padding-left: 44px;
       text-align: left;
+
+      &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
     }
 
     .accordion__title {

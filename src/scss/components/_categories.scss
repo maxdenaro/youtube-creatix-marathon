@@ -5,6 +5,10 @@
   &__title {
     margin-bottom: 39px;
   }
+
+  @include mobile {
+    padding: 40px 0;
+  }
 }
 
 .categories-nav {
@@ -14,6 +18,14 @@
 
   &__item {
     width: calc(100% / 6);
+
+    @include tablet {
+      width: calc(100% / 3);
+    }
+
+    @include mobile {
+      width: 100%
+    }
   }
 
   &__btn {
@@ -31,10 +43,27 @@
     color: #9a9ca5;
     transition: color 0.3s ease-in-out;
 
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
+
     &--active {
       border-color: currentColor;
       color: var(--color-primary);
     }
+  }
+
+  @include tablet {
+    flex-wrap: wrap;
   }
 }
 
@@ -77,6 +106,19 @@
       height: 24px;
       fill: currentColor;
       object-fit: cover;
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
     }
 
     &--active {

@@ -3,17 +3,32 @@
   padding-bottom: 80px;
   background-color: #f4f5f7;
 
+  .grid {
+    @include tablet {
+      display: block;
+    }
+  }
+
   &__left {
     grid-column: 5 span;
 
     img {
       margin-bottom: -142px;
+
+      @include tablet {
+        margin-bottom: 0;
+      }
     }
   }
 
   &__right {
     grid-column: 7 span;
     padding-left: 104px;
+
+    @include tablet {
+      padding-top: 30px;
+      padding-left: 0;
+    }
   }
 
   &__title {

@@ -8,6 +8,33 @@
 
   &__nav {
     margin-left: -112px;
+
+    @include minidesk {
+      margin-left: 0;
+    }
+
+    @include tablet {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1000;
+      display: block;
+      overflow-y: auto;
+      padding: 50px;
+      width: 80%;
+      height: 100vh;
+      background-color: var(--color-light);
+      transform: translateX(-150%);
+      transition: transform 0.3s ease-in-out;
+
+      &--active {
+        transform: none;
+      }
+    }
+
+    @include mobile {
+      padding: 20px;
+    }
   }
 
   &--main {
@@ -19,5 +46,20 @@
     left: 0;
     top: 0;
     width: 100%;
+  }
+}
+
+.logo {
+  @include minidesk {
+    max-width: 100px;
+  }
+
+  @include tablet {
+    max-width: none;
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
   }
 }
