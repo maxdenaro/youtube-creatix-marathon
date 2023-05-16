@@ -1,139 +1,139 @@
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-  margin: 0;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+    overflow: hidden !important; // если используете на сайте position: sticky - уберите эту настройку
 }
 
 .is-hidden {
-  display: none !important; // stylelint-disable-line declaration-no-important
+    display: none !important; // stylelint-disable-line declaration-no-important
 }
 
 .btn-reset {
-  border: none;
-  padding: 0;
-  background: transparent;
-  cursor: pointer;
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
 }
 
 .list-reset {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1260px;
+    overflow: hidden;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
-  outline: none;
+    outline: none;
 }
 
 .main-title {
-  margin: 0;
-  margin-bottom: 25px;
-  font-weight: 700;
-  font-size: 72px;
-  line-height: 130%;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--color-ebony);
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 130%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-ebony);
 
-  span {
-    color: var(--color-primary);
-  }
+    span {
+        color: var(--color-primary);
+    }
 
-  &--home {
-    color: var(--color-light);
-  }
+    &--home {
+        color: var(--color-light);
+    }
 }
 
 .main-descr {
-  margin: 0;
-  font-size: 20px;
-  line-height: 150%;
-  color: var(--color-storm);
+    margin: 0;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-storm);
 
-  &--home {
-    margin-bottom: 60px;
-    color: var(--color-light);
-  }
+    &--home {
+        margin-bottom: 60px;
+        color: var(--color-light);
+    }
 }
 
 .btn {
-  border-style: solid;
-  border-width: 1px;
-  border-color: transparent;
-  border-radius: 4px;
-  padding: 15px 39px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: var(--color-light);
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 4px;
+    padding: 15px 39px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--color-light);
 
-  &--fill {
-    background-color: var(--color-primary);
-  }
-
-  &--stroke {
-
-    &-light {
-      border-color: var(--color-light);
+    &--fill {
+        background-color: var(--color-primary);
     }
-  }
+
+    &--stroke {
+        &-light {
+            border-color: var(--color-light);
+        }
+    }
 }
 
 .title {
-  margin: 0;
-  margin-bottom: 25px;
-  font-weight: 700;
-  font-size: 46px;
-  line-height: 130%;
-  color: var(--color-ebony);
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 130%;
+    color: var(--color-ebony);
 
-  &--center {
-    text-align: center;
-  }
+    &--center {
+        text-align: center;
+    }
 }
 
 .descr {
-  margin: 0;
-  margin-bottom: 60px;
-  font-size: 18px;
-  line-height: 150%;
-  color: var(--color-storm);
+    margin: 0;
+    margin-bottom: 60px;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--color-storm);
 
-  &--center {
-    text-align: center;
-  }
+    &--center {
+        text-align: center;
+    }
 }
 
 .section-offset {
-  padding-top: 120px;
+    padding-top: 120px;
 }
